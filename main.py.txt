@@ -9,32 +9,9 @@ def index():
 @app.route('/add', methods=['POST'])
 def add():
     try:
-        import pandas as pd
-        import joblib
-        model = joblib.load("mymodel_rf.h5")
-        feature_names = model.feature_names_in_
-        a=img(request.form['a'])
-        b=int(reqest.form['b'])
-        c=int(reqest.form['c'])
-        d=int(reqest.form['d'])
-        e=int(reqest.form['e'])
-        f=int(reqest.form['f'])
-        g=int(reqest.form['g'])
-        h=int(reqest.form['h'])
-        i=int(reqest.form['i'])
-        j=int(reqest.form['j'])
-        k=int(reqest.form['k'])
-
-        d={"profile pic":0,"nums/length username":0.14,
-        "fullname words":1,"nums/length fullname":0,
-        "name==username":0,"description length":0,
-        "external URL":0,"private":0,"#posts":0,"#followers":1906,
-        "#follows":2129}
-        data=pd.DataFrame([d])
-        data = data.reindex(columns=feature_names, fill_value=0)
-        data = pd.get_dummies(data)
-        data = data.reindex(columns=feature_names, fill_value=0)
-        predictions = model.predict(data) 
+        num1 = float(request.form['num1'])
+        num2 = float(request.form['num2'])
+        result = num1 + num2
     except ValueError:
         result = "Invalid input! Please enter numbers only."
     
