@@ -1,0 +1,4 @@
+Flask
+Machine Learning Algorithms
+Pandans
+numpy
