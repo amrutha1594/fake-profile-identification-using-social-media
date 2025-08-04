@@ -2,3 +2,5 @@ Flask
 Machine Learning Algorithms
 Pandans
 numpy
+HTML
+CSS
